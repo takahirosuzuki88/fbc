@@ -16,13 +16,14 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contacts_params)
     if @contact.save
       redirect_to root_path, notice: "お問合せいただきありがとうございました！"
+      NoticeMailer.sendmail_contact(@contact).deliver
     else
       render 'new'
     end
   end
-  
+
   private
     def contacts_params
       params.require(:contact).permit(:name, :email, :content)
-    end  
+    end
 end
