@@ -9,7 +9,7 @@
   </thead>
 
 <tbody>
-  <%= @poems.each do |poem| %>
+  <% @poems.each do |poem| %>
     <td><%= poem.title %></td>
     <td><%= poem.content %></td>
     <td><%= link_to 'Show', poem %></td>
