@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   end
  end
 
- resources :blogs, only: [:index, :new, :create, :edit, :update, :destroy] do
+ resources :blogs do
+  resources :comments
+  post :confirm, on: :collection
   collection do
    post :confirm
   end
