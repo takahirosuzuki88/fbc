@@ -1,0 +1,25 @@
+<div class="child row">
+  <div class="wrapper col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
+    <div class="user-show">
+      <%= profile_img(@user) %>
+      <br>
+      <%= @user.name %>
+      <br>
+      <%= @user.email %>
+      <%= render 'follow_form', user: @user %>
+
+    <h3>フォロワーされているユーザー一覧</h3>
+    <br>
+    <% @user.followers.each do |follower| %>
+      <%= profile_img(follower) %>
+      <%= follower.name %>
+    <% end %>
+
+    <h3>フォロワーしているユーザー一覧</h3>
+    <% @user.followed_users.each do |followed_user| %>
+      <%= profile_img(followed_user) %>
+      <%= followed_user.name %>
+    <% end %>
+    </div>
+  </div>
+</div>
