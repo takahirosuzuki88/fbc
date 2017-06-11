@@ -7,19 +7,8 @@
       <br>
       <%= @user.email %>
       <%= render 'follow_form', user: @user %>
+      <%= render 'follow_list', user: @user %>
 
-    <h3>フォローユーザー一覧</h3>
-    <% @user.followed_users.each do |followed_user| %>
-      <%= profile_img(followed_user) %>
-      <%= followed_user.name %>
-    <% end %>
-
-    <h3>フォロワーユーザー一覧</h3>
-    <br>
-    <% @user.followers.each do |follower| %>
-      <%= profile_img(follower) %>
-      <%= follower.name %>
-    <% end %>
     </div>
   </div>
 </div>
