@@ -75,3 +75,5 @@ gem 'omniauth-facebook'
 gem 'carrierwave'
 
 gem 'pusher'
+
+gem 'fog'
