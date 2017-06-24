@@ -10,6 +10,8 @@ Devise.setup do |config|
     config.omniauth :twitter, ENV["TWITTER_ID_DEVELOPMENT"], ENV["TWITTER_SECRET_DEVELOPMENT"], scope: 'email', display: 'popup', info_fields: 'name, email'
   end
 
+  config.secret_key = '94ffc554f350462c69a8c58ead5c5263b609fa49c843e5e0e51826e3bb26f1481a882dd1f7fd04ffd092d644aaf8b1ee58763162d2f2c5b4a2f6c51c9dfa9424'
+
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
