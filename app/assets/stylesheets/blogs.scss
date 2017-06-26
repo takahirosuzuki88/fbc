@@ -16,7 +16,12 @@ input[type="submit"].btn-block{
 }
 
 .container{
-  padding-bottom: 85px;
+/**  padding-bottom: 85px; */
+   margin-top: 100px;
+}
+
+.container.home {
+  margin-top:0px;
 }
 
 .page-blogtop-btn {
