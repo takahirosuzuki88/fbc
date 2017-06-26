@@ -51,7 +51,7 @@ group :development, :test do
   gem 'capistrano3-unicorn'
 end
 
-gem 'twitter-bootstrap-rails'
+#gem 'twitter-bootstrap-rails'
 
 gem 'jquery-turbolinks'
 
