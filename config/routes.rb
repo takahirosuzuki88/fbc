@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   end
  end
 
- resources :blogs do
+ resources :topics do
   resources :comments
   post :confirm, on: :collection
   collection do

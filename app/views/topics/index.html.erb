@@ -1,0 +1,25 @@
+<div class="container">
+
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+    <p><%= notice %></p>
+    <h3>ブログ一覧</h3>
+      <%= link_to "ブログを作成する", new_topic_path, class: 'btn btn-default' %>
+    <% @topics.each do |topic| %>
+    <div class="row">
+      <%= link_to topic_path(topic)do %>
+        <h4><strong><%= topic.title %></strong></h4>
+      <% end %>
+      <p><%= topic.content %></p>
+      <p><%= topic.user.name %></p>
+      <p><%= profile_img(topic.user) %></p>
+      <%= link_to "編集", edit_topic_path(topic.id), class: 'btn btn-default btn-sm btn-success' %>
+      <%= link_to "削除", topic_path(topic.id), method: :delete, data: { confirm: '本当に削除していいですか？'}, class: 'btn btn-default btn-sm btn btn-danger' %>
+    </div>
+    <% end %>
+  </div>
+
+  <div id="page-blogtop-btn" class="page-blogtop-btn">
+    <p><a class="move-page-blogtop" id="move-page-blogtop">▲</a></p>
+  </div>
+
+</div>
