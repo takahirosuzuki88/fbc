@@ -7,7 +7,7 @@
         <p>
           <%= profile_img(notification.comment.user) %>
           <%= notification.comment.user.try(:name) %>さんが
-          あなたのブログ（<%= link_to "#{notification.comment.blog.title}", blog_path(notification.comment.blog, notification_id: notification.id) %>）にコメントしました。
+          あなたのトピック（<%= link_to "#{notification.comment.blog.title}", blog_path(notification.comment.blog, notification_id: notification.id) %>）にコメントしました。
         </p>
         <p><%= notification.created_at %></p>
     </li>

@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
         format.js { render :index }
 #        unless @comment.topic.user_id == current_user.id
 #          Pusher.trigger("user_#{@comment.topic.user_id}_channel", 'comment_created', {
-#            message: 'あなたの作成したブログにコメントが付きました'
+#            message: 'あなたの作成したトピックにコメントが付きました'
 #          })
 #        end
 #          Pusher.trigger("user_#{@comment.topic.user_id}_channel", 'notification_created', {
@@ -31,7 +31,7 @@ class CommentsController < ApplicationController
     @comment.update(comment_params)
     @topic = @comment.topic
     if @comment.save
-      redirect_to topics_path(@topic), notice: "ブログを編集しました！"
+      redirect_to topics_path(@topic), notice: "トピックを編集しました！"
     else
       render 'edit'
     end

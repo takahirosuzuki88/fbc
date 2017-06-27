@@ -1,7 +1,7 @@
 ja:
   activerecord:
     models:
-      blog: "ブログ"
+      blog: "トピック"
       contact: "お問い合わせ"
       user: "ユーザー"
     attributes:
